@@ -47,8 +47,18 @@ console.log(userAccess);
         trueElement.style.display = "block";
     } else {
         console.log("EMAIL NON CORRETTA");
-        const trueElement = document.getElementById("false");
-        trueElement.style.display = "block";
+        const falseElement = document.getElementById("false");
+        falseElement.style.display = "block";
         document.querySelector('input').value = " ";
     }    
+})
+
+document.getElementById("reset").addEventListener("click", function() {
+
+    const falseElement = document.getElementById("false");
+        falseElement.style.display = "none";
+        document.querySelector('input').value = " ";
+        const trueElement = document.getElementById("true");
+        trueElement.style.display = "none";
+
 })
